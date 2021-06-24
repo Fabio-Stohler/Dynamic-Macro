@@ -1,3 +1,6 @@
+# Exercise 1 - By Timothy Meyer and Fabio Stohler
+
+
 ## Solve the Consumption Savings Model using Value Function Iteration
 using Plots
 include("C:/Users/fasto/Dropbox/Desktop/Computational Macro/Julia/Dynamic-Macro/Functions/VFI_update_spline.jl")

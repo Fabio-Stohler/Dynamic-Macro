@@ -1,3 +1,5 @@
+# Exercise 1 - By Timothy Meyer and Fabio Stohler
+
 using CubicSplines, Optim
 ## VF Update
 function VFI_update_spline(V,Y,util,par,mpar,gri,Π)
