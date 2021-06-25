@@ -21,7 +21,7 @@ println(mpar) # Display numerical parameters
 # `γ`: Coefficient of relative risk aversion
 # `β`: Discount factor
 # `b`: borrowing limit
-par = (r = 4/90, γ = 1.0, β = 0.95, b = mpar.mink)
+par = (r = 4/90, γ = 1.0, β = 0.99, b = mpar.mink)
 println("Economic parameters")
 println(par) # Display economic parameters
 
@@ -29,6 +29,7 @@ println(par) # Display economic parameters
 #Define asset grid on log-linearspaced
 gri   = (
             k = exp.(collect(range(log(1),log(mpar.maxk-mpar.mink+1);length = mpar.nk))) .- 1 .+ mpar.mink,
+            #k = collect(range(mpar.mink,mpar.maxk;length = mpar.nk)) # Alternative grid
             z = [1/9; 10/9]
         )
 Π     = [3/5 2/5; 4/90 86/90] # Transition matrix for income
@@ -107,7 +108,7 @@ xlabel!("assets")
 ylabel!("saving")
 savefig("PFI.png")
 
-figure3 = plot(gri.k,Kprimestar - kprime) #Plot Differences in Policies
+figure3 = plot(gri.k,Kprimestar - kprime,labels=["low productivity" "high productivity"],legend= :topright) #Plot Differences in Policies
 title!("Difference in Policy Function")
 
 ## 8. Compare times of algorithms
