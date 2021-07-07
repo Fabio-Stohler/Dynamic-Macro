@@ -41,5 +41,5 @@ include("Ex3.jl")
 include("Ex4.jl")
 ## III. Exercise 5: Aiyagari model
 include("Ex5.jl")
-timeTotal   = time() - timer
-println("Total time for calculation", timeTotal)
+timeTotal   = time() - timer;
+println("Total time for calculation ", timeTotal)
