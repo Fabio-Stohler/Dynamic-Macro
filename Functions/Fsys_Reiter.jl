@@ -45,7 +45,7 @@ function Fsys_Reiter(Xhat, XhatPrime, XSS, mpar, par, idSS,idDev,gri,meshes,Π)
     # TFP
     F[idDev.Z] = log(XPrime[idSS.Z]) - par.ρ_Z*log(X[idSS.Z])   # TFP law of motion
     # Interest rates
-    F[idDev.R] = log(X[idSS.R]) - log(par.α*X[idSS.Y]/X[idSS.K] + par.δ)    
+    F[idDev.R] = log(X[idSS.R]) - log(par.α*X[idSS.Y]/X[idSS.K] + (1-par.δ))    
     # Consumption
     F[idDev.C] = log(X[idSS.C]) - log(X[idSS.Y] - X[idSS.I])   # Euler equation, c = u'^(-1)(R*β*E[u'(c')]) 
     # Investment

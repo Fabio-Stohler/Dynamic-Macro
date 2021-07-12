@@ -1,4 +1,4 @@
-
+starttime = time()
 # Specific parameter adjustments
 @set! mpar.maxk = 20    # Maximimum assets
 @set! mpar.mink = -9/4    # Minimum Assets (equal to Borrowing Limit)
@@ -36,7 +36,7 @@ ExD   = ExcessDemand.(KD)  # calculate excess demand for these amounts of capita
 ## 3. Find equilibrium
 Rstar_Aiyagari  = rate(fzero(ExcessDemand,(Kdemand(0.045),Kdemand(0.00)))) # find equilibrium amount of capital (and corresponding rate)
 println("Equilibrium Interest Rate: ",Rstar_Aiyagari)
-
+println(starttime - time())
 
 ## 4. Plot
 figure4 = plot(ExD+KD,Rgrid,label="Supply of Funds");

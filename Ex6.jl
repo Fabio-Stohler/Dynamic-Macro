@@ -146,7 +146,10 @@ for t=1:mpar.T
     x_t[:,t] = [I(mpar.nstates) ; S2C] *s_t[:,t]
 end
 
+# Plotting
 figure1 = plot(x_t[[idDev.Y, idDev.C, idDev.I, idDev.R],:]',labels=["Output" "Consumption" "Investment" "interest rate"],legend= :topright);
 xlabel!("Periods")
 ylabel!("Impulse Responses")
 display(figure1)
+
+# Development of the distribution after the shock
