@@ -39,7 +39,7 @@ function Fsys_Reiter(Xhat, XhatPrime, XSS, mpar, par, idSS,idDev,gri,meshes,Π)
     #--------------------------------------------------------------------------------------------------------------
     F = zeros(eltype(Xhat),length(Xhat))
     # Capital summary
-    F[idDev.K] = log(X[idSS.K]) - log(dot(Dist,[gri.k;gri.k]))   # Grid und distribution
+    F[idDev.K] = log(X[idSS.K]) - log(dot(Dist,meshes.k))   # Grid und distribution
     # Output
     F[idDev.Y] = log(X[idSS.Y]) - log(X[idSS.Z]*par.N^(1-par.α)*X[idSS.K]^par.α)  # Output
     # TFP

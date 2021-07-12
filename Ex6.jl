@@ -13,7 +13,7 @@ include("Functions/Klein.jl")
     crit = 1.0e-10 # Precision up to which to solve the value function
     maxk = 20 # highest point on the capital grid
     mink = 0 # lowest point on the capital grid
-    T = 10 # length of IRF
+    T = 40 # length of IRF
     nstates = 1 # Number of aggregate states 
     ncontrols = 1 # Number of aggregate controls
     ntotal = 2 # Number of parameters totally
@@ -22,7 +22,7 @@ mpar = NumericalParameters()
 
 @with_kw struct EconomicParameters
     r = 0 # Real Rate
-    γ = 4 # Coefficient of relative risk aversion
+    γ = 1 # Coefficient of relative risk aversion
     β = 0.95 # Discount factor
     α = 0.36 # Curvature of production function
     δ = 0.1 # Depreciation
@@ -146,10 +146,7 @@ for t=1:mpar.T
     x_t[:,t] = [I(mpar.nstates) ; S2C] *s_t[:,t]
 end
 
-# Plotting
 figure1 = plot(x_t[[idDev.Y, idDev.C, idDev.I, idDev.R],:]',labels=["Output" "Consumption" "Investment" "interest rate"],legend= :topright);
 xlabel!("Periods")
 ylabel!("Impulse Responses")
 display(figure1)
-
-# Development of the distribution after the shock
