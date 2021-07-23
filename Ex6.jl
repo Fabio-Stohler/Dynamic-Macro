@@ -80,7 +80,7 @@ ExcessDemand(K) = K_Agg(rate(K),wage(K),par,mpar,Π,meshes,gri)[1] - K   # Calcu
 
 Rstar           = rate(fzero(ExcessDemand,(Kdemand(0.052),Kdemand(-0.01)))) # find equilibrium amount of capital (and corresponding rate)
 Kstar           = Kdemand(Rstar)
-~,saving_star,marginal_k, StDist, Γ,c_star = K_Agg(rate(Kstar),wage(Kstar),par,mpar,Π,meshes,gri)
+~,saving_star,marginal_k,StDist,Γ,c_star = K_Agg(rate(Kstar),wage(Kstar),par,mpar,Π,meshes,gri)
 
 
 ## 3. introduce aggregate Risk: Reiter method
