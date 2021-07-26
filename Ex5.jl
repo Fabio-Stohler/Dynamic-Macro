@@ -36,7 +36,8 @@ ExD   = ExcessDemand.(KD)  # calculate excess demand for these amounts of capita
 ## 3. Find equilibrium
 Rstar_Aiyagari  = rate(fzero(ExcessDemand,(Kdemand(0.045),Kdemand(0.00)))) # find equilibrium amount of capital (and corresponding rate)
 println("Equilibrium Interest Rate: ",Rstar_Aiyagari)
-println(starttime - time())
+println("Equilibrium Capital Stock: ",Kdemand(Rstar_Aiyagari))
+println(time() - starttime)
 
 ## 4. Plot
 figure4 = plot(ExD+KD,Rgrid,label="Supply of Funds");
