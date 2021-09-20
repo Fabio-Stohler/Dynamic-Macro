@@ -112,5 +112,5 @@ figure3 = plot(gri.k,Kprimestar - kprime,labels=["low productivity" "high produc
 title!("Difference in Policy Function")
 
 ## 8. Compare times of algorithms
-println("Time to solve (VFI, EGM)", [timeVFI timeEGM])
-println("Iterations to solve (VFI, EGM)", [iterVF iterEG])
+println("\nTime to solve (VFI, EGM) ", [timeVFI timeEGM])
+println("Iterations to solve (VFI, EGM) ", [iterVF iterEG])

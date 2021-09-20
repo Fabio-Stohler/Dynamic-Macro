@@ -121,7 +121,7 @@ ylabel!("saving")
 
 ## 6. Display time and convergence stats
 println("Time for solution")
-println("on grid:",time1)
+println("on grid: ",time1)
 println("off grid: ",time2)
 
 figure3 = plot(1:length(distVF_on)-1,distVF_on[2:end],yaxis = :log,label="on grid")
