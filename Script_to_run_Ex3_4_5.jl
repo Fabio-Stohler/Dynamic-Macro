@@ -1,7 +1,6 @@
 using Parameters, Plots, Setfield, Interpolations, Random, Roots
 ## 1. Define parameters (Common header for Exercise 3-5)
-cd("C:/Users/fasto/Dropbox/Desktop/Computational Macro/Julia/Dynamic-Macro/")
-include("Functions/K_Agg.jl")
+include("./Functions/K_Agg.jl")
 
 @with_kw struct NumericalParameters
     nk = 100 # Number of points on the asset grid
