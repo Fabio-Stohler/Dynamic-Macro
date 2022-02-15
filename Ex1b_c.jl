@@ -1,8 +1,8 @@
 ## Solve the Consumption Savings Model using Value Function Iteration
 using Plots
-include("C:/Users/fasto/Dropbox/Desktop/Computational Macro/Julia/Dynamic-Macro/Functions/VFI_update_spline.jl")
-include("C:/Users/fasto/Dropbox/Desktop/Computational Macro/Julia/Dynamic-Macro/Functions/TransitionMat.jl")
-include("C:/Users/fasto/Dropbox/Desktop/Computational Macro/Julia/Dynamic-Macro/Functions/broyden.jl")
+include("./Functions/VFI_update_spline.jl")
+include("./Functions/TransitionMat.jl")
+include("./Functions/broyden.jl")
 ## 1. Define parameters
 
 # Numerical parameters

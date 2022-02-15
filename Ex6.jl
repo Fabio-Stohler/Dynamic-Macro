@@ -1,9 +1,8 @@
 ## Exercise 6: A HANC model, Reiter's method
 using Parameters, Setfield, PrettyTables, Roots, ForwardDiff, LinearAlgebra, Plots
-cd("C:/Users/fasto/Dropbox/Desktop/Computational Macro/Julia/Dynamic-Macro")
-include("Functions/K_Agg.jl")
-include("Functions/Fsys_Reiter.jl")
-include("Functions/Klein.jl")
+include("./Functions/K_Agg.jl")
+include("./Functions/Fsys_Reiter.jl")
+include("./Functions/Klein.jl")
 
 
 ## 1. Define parameters
