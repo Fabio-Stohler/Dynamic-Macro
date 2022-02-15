@@ -1,8 +1,7 @@
 ## Solve the Consumption Savings Model using an Endogenous Grid Method (EGM)
 using Plots
-cd("C:/Users/fasto/Dropbox/Desktop/Computational Macro/Julia/Dynamic-Macro")
-include("Functions/VFI_update_spline.jl")
-include("Functions/EGM.jl")
+include("./Functions/VFI_update_spline.jl")
+include("./Functions/EGM.jl")
 
 ## 1. Define parameters
 

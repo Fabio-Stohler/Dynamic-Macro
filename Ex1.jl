@@ -3,7 +3,7 @@
 
 ## Solve the Consumption Savings Model using Value Function Iteration
 using Plots
-include("C:/Users/fasto/Dropbox/Desktop/Computational Macro/Julia/Dynamic-Macro/Functions/VFI_update_spline.jl")
+include("./Functions/VFI_update_spline.jl")
 
 ## 1. Define parameters
 
