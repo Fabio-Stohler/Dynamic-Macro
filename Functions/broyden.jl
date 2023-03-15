@@ -1,4 +1,4 @@
-function broyden(f,x0,critF,critX,maxiter)
+function broyden(f,x0,critF, critX, maxiter)
     # The function uses the "good" broyden algorithm to solve for the root of a function f.
     # x0 is the starting guess. CritX the precision in variable X; critF the precision
     # to which the root needs to be found. MAXITER is the maximum number of iterations.
