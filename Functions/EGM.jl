@@ -71,7 +71,7 @@ function EGM(C,mutil,invmutil,R,RPrime,par,mpar,Π,meshes,gri)
     mu     = mutil(C) # Calculate marginal utility from c'
     emu    = mu*Π'     # Calculate expected marginal utility
     Cstar  = invmutil(par.β *RPrime * emu)     # Calculate cstar(m',z)
-    Kstar  = (Cstar  + meshes.k - meshes.z)/RPrime # Calculate mstar(m',z)
+    Kstar  = (Cstar  + meshes.k - meshes.z)/R # Calculate mstar(m',z)
     Kprime = ones(eltype(C),size(meshes.k)) # initialize Capital Policy
 
     for z=1:mpar.nz # For massive problems, this can be done in parallel
